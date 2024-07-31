@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Part Time",
     default: "Part Time",
   },
-  description: "A social network for part-time workers",
+  description: "A social network for sharing part-time job opportunities.",
 };
 
 export default function RootLayout({
