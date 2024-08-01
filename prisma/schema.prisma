@@ -38,8 +38,16 @@ model Session {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  User      User?    @relation(fields: [userId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
   userId    String?
 
   @@map("sessions")
+}
+
+model PasswordResetToken {
+  token_hash String   @unique
+  expires_at DateTime
+  userId     String
+
+  @@map("password_reset_tokens")
 }
